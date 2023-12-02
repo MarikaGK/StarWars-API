@@ -1,18 +1,24 @@
 {
-  "name": "react-webpack",
+  "name": "starwars-api",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://marikagk.github.io/starwars-api/",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack serve --mode development",
+    "dev": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "axios": "^1.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-loader-spinner": "^5.4.5",
+    "react-router-dom": "^6.20.0",
+    "react-uuid": "^2.0.0",
+    "svg-inline-loader": "^0.8.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -20,6 +26,7 @@
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "sass": "^1.38.1",
     "sass-loader": "^12.1.0",

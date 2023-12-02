@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstarwars_api=self.webpackChunkstarwars_api||[]).push([[560],{560:(e,a,t)=>{t.r(a),t.d(a,{default:()=>n});var r=t(294);const n=function(){return r.createElement("div",null,r.createElement("h1",null,"Home"))}}}]);
