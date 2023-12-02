@@ -1,0 +1,376 @@
+:root {
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  --primary-color: rgb(238, 238, 238);
+  --primary-transparent: rgba(255, 255, 255, 0.115);
+  --primary-grey: rgb(97, 97, 97);
+  --neon-blue-color: rgba(77, 149, 169, 0.579);
+  --primary-background-color: rgb(26, 26, 26);
+  --primary-font: "Roboto", sans-serif;
+  --logo-font: "Poller One", serif;
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-transparent);
+  backdrop-filter: blur(2px);
+  box-shadow: 5px 0 10px var(--primary-transparent);
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
+}
+
+.logo {
+  font-family: var(--logo-font);
+  color: var(--primary-color);
+  font-size: 35px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 7px var(--neon-blue-color);
+  text-decoration: none;
+}
+
+.footer {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-transparent);
+  backdrop-filter: blur(2px);
+  box-shadow: -5px 0 10px var(--primary-transparent);
+
+  @media screen and (min-width: 768px) {
+    height: 40px;
+  }
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shared-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-background-color);
+  background-image: url("./assets/images/stars-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  //   @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  //     (min-device-pixel-ratio: 2) {
+  //     background-image: url("./assets/images/stars-mobile@2x.jpg");
+  //   }
+
+  //   @media screen and (min-width: 768px) {
+  //     background-image: url("./assets/images/stars-tablet.jpg");
+  //   }
+  //   @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+  //     (min-device-pixel-ratio: 2) {
+  //     background-image: url("./assets/images/stars-tablet@2x.jpg");
+  //   }
+  //   @media screen and (min-width: 1280px) {
+  //     background-image: url("./assets/images/stars-desktop.jpg");
+  //   }
+  //   @media only screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2),
+  //     (min-device-pixel-ratio: 2) {
+  //     background-image: url("./assets/images/stars-desktop@2x.jpg");
+  //   }
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-wrapper {
+  padding: 0 0 30px 0;
+}
+
+.label {
+  color: var(--primary-grey);
+  font-size: 14px;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.filter {
+  background-color: transparent;
+  outline: none;
+  height: 25px;
+  width: 200px;
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  box-shadow: 0 0 10px var(--primary-transparent);
+}
+
+.table {
+  position: relative;
+  height: 60vh;
+  width: 70vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 4px 4px 20px var(--primary-transparent),
+    -4px -4px 20px var(--neon-blue-color);
+  border-radius: 5px;
+}
+
+.table::-webkit-scrollbar {
+  width: 0;
+}
+
+.table-body {
+  width: 100%;
+}
+
+.table-header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: grid;
+  grid-template-columns: 25% 12% 12% 15% 15% 21%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.table-header__btn {
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: black;
+  text-shadow: 0px 0px 2px var(--primary-transparent),
+    0px 0px 2px var(--primary-transparent);
+  background-color: transparent;
+  border: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.table-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: var(--primary-color);
+  font-size: 12px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.table-item__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: var(--primary-color);
+  font-size: 12px;
+  transform: scale(1);
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.table-item__link:hover,
+.table-item__link:focus {
+  text-shadow: 2px 2px 5px var(--neon-blue-color),
+    -1px -1px 3px var(--primary-transparent);
+  transform: scale(1.05);
+}
+
+.table-item__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  text-transform: uppercase;
+  color: black;
+  text-shadow: 0px 0px 2px var(--primary-transparent),
+    0px 0px 2px var(--primary-transparent);
+  background-color: var(--primary-grey);
+  transform: scale(1);
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.table-item__header:hover,
+.table-item__header:focus {
+  transform: scale(1.05);
+  text-shadow: 0px 0px 2px var(--primary-transparent),
+    0px 0px 2px var(--primary-transparent),
+    0px 0px 2px var(--primary-transparent);
+  box-shadow: 0 0 5px var(--primary-transparent);
+}
+
+.table-rows {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 25% 12% 12% 15% 15% 21%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-width: 280px;
+  background-color: transparent;
+  border: 1px solid var(--primary-transparent);
+}
+
+.loader-wrapper {
+  padding: 20px;
+}
+
+.loader {
+  font-weight: 400;
+  font-size: 12px;
+  animation-name: loader;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  @media screen and (min-width: 768px) {
+   font-size: 16px;
+  }
+}
+@keyframes loader {
+  0% {
+    color: var(--primary-grey);
+    text-shadow: 0px 0px 3px var(--neon-blue-color);
+  }
+  50% {
+    color: var(--primary-transparent);
+    text-shadow: 0px 0px 2px var(--primary-transparent);
+  }
+  100% {
+    color: var(--primary-grey);
+    text-shadow: 0px 0px 3px var(--neon-blue-color);
+  }
+}
+
+.modal-backdrop {
+  z-index: 98;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--primary-transparent);
+  backdrop-filter: blur(2px);
+  overflow: hidden;
+}
+
+.modal-window {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-background-color);
+  @media screen and (min-width: 768px) {
+    height: 600px;
+    width: 400px;
+    box-shadow: 4px 4px 20px var(--primary-transparent),
+      -4px -4px 20px var(--neon-blue-color);
+    border-radius: 5px;
+  }
+}
+
+.close-icon__btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--primary-color);
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.planet-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.planet-info {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: var(--primary-color);
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.planet-info__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-grey);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 5px var(--neon-blue-color);
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.planet-info__description {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-grey);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
