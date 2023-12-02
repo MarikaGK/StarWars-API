@@ -9,7 +9,6 @@ export const formatStringAsSpacedNumber = (string) => {
       .split("")
       .reverse()
       .join("");
-    console.log("divided: ", divided);
     return divided;
   }
 };
