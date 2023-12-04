@@ -1,6 +1,6 @@
 import React from "react";
 import TableHeader from "./TableHeader.jsx";
-import TableRow from "./TableRow.jsx";
+import CharacterDetails from "./CharacterDetails.jsx";
 import uuid from "react-uuid";
 import Loader from "../shared/Loader.jsx";
 import { useState } from "react";
@@ -8,7 +8,13 @@ import { getPlanetData } from "../../services/swapi.js";
 import ModalWindow from "../shared/ModalWindow.jsx";
 import PlanetInfo from "../PlanetInfo/PlanetInfo.jsx";
 
-const Table = ({ people, isLoading, sortByDate, sortByString, sortByNumber }) => {
+const Table = ({
+  people,
+  isLoading,
+  sortByDate,
+  sortByString,
+  sortByNumber,
+}) => {
   const [isDataLoading, setIsDataLoading] = useState(false);
   const [modalData, setModalData] = useState({});
   const [diameter, setDiameter] = useState("");
@@ -47,12 +53,16 @@ const Table = ({ people, isLoading, sortByDate, sortByString, sortByNumber }) =>
 
   return (
     <div className="table">
-      <TableHeader sortByDate={sortByDate} sortByString={sortByString} sortByNumber={sortByNumber} />
-      <ul className="table-rows">
+      <ul className="table-body">
+        <TableHeader
+          sortByDate={sortByDate}
+          sortByString={sortByString}
+          sortByNumber={sortByNumber}
+        />
         {people &&
           people.map((one) => (
             <li key={uuid()}>
-              <TableRow {...one} openModal={openModal} />
+              <CharacterDetails {...one} openModal={openModal} />
             </li>
           ))}
         {isLoading && <Loader />}
