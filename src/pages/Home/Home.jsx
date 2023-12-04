@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { get, getPeopleData, getPlanetsNames } from "../../services/swapi";
+import { getPeopleData, getPlanetsNames } from "../../services/swapi";
 import Table from "../../components/Table/Table.jsx";
 import Filter from "../../components/Filter/Filter.jsx";
 import { noRepeatsArray } from "../../utils/noRepeatsArray.js";

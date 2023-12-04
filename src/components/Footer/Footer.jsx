@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../shared/Button.jsx";
 
 const Footer = () => {
   return (

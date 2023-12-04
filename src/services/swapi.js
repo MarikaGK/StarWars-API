@@ -1,7 +1,6 @@
 import axios from "axios";
 import { turnPlanetUrlIntoNo } from "../utils/turnPlanetUrlIntoNo";
 
-// export const get = async (url) => {
 export const getPeopleData = async (url) => {
   try {
     const response = await axios.get(url);
