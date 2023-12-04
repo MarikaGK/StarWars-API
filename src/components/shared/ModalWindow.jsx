@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
-import Loader from "./Loader";
+import Loader from "./Loader.jsx";
 
 const ModalWindow = ({ isDataLoading, onClose, children }) => {
   const modalBackdropRef = useRef(null);
