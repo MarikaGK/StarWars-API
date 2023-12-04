@@ -4,7 +4,7 @@ const Filter = ({ input, onChange }) => {
   return (
     <div className="filter-wrapper">
       <label className="label">
-        Looking for your favorite character, are you? Type him right there:&nbsp;&nbsp;&nbsp;
+        Looking for your favorite character, are you? Type him right there:&nbsp;&nbsp;
         <input
           className="filter"
           type="filter"

@@ -1,9 +1,9 @@
 import React from "react";
 
-const Loader = () => {
+const Loader = ({text}) => {
   return (
     <div className="loader-wrapper">
-        <h4 className="loader">The Force is awakening, you should know...</h4>
+        <h4 className="loader">{text}</h4>
     </div>
   );
 };

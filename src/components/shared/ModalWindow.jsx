@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
+import Loader from "./Loader";
 
 const ModalWindow = ({ isDataLoading, onClose, children }) => {
   const modalBackdropRef = useRef(null);
@@ -35,11 +36,7 @@ const ModalWindow = ({ isDataLoading, onClose, children }) => {
           <button type="button" className="close-icon__btn" onClick={onClose}>
             X
           </button>
-          {isDataLoading ? (
-            <h4 className="loader">To wait, you must</h4>
-          ) : (
-            children
-          )}
+          {isDataLoading ? <Loader text="To wait, you must" /> : children}
         </div>
       </div>
     </>

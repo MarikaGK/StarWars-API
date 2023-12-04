@@ -16,7 +16,6 @@ const Table = ({
   sortByNumber,
 }) => {
   const [isDataLoading, setIsDataLoading] = useState(false);
-  const [modalData, setModalData] = useState({});
   const [diameter, setDiameter] = useState("");
   const [name, setName] = useState("");
   const [population, setPopulation] = useState("");
@@ -36,9 +35,6 @@ const Table = ({
       setDiameter(() => diameter);
       setPopulation(() => population);
       setClimate(() => climate);
-      //   const planetData = results.data;
-      //   return planetData
-      //   setModalData(planetData);
     } catch (err) {
       console.error(err);
     } finally {
@@ -48,7 +44,7 @@ const Table = ({
 
   const openModal = async (url) => {
     toggleModal();
-    fetchPlanetData(url).then((data) => setModalData(data));
+    fetchPlanetData(url)
   };
 
   return (
@@ -65,7 +61,7 @@ const Table = ({
               <CharacterDetails {...one} openModal={openModal} />
             </li>
           ))}
-        {isLoading && <Loader />}
+        {isLoading && <Loader text='The Force is awakening, you should know...' />}
       </ul>
       {isModalOpen && (
         <ModalWindow isDataLoading={isDataLoading} onClose={toggleModal}>
