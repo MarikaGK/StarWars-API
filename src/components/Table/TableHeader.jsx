@@ -3,7 +3,10 @@ import uuid from "react-uuid";
 
 const TableHeader = ({ sortByDate, sortByString, sortByNumber }) => {
   return (
-    <ul className="table-row table-header table-body">
+    <ul className="table-header">
+      <li key={uuid()} className="table-item__header__mobile">
+        <p className="character-details__desc__mobile">sort by:</p>
+      </li>
       <li key={uuid()} className="table-item__header">
         <button
           type="button"
