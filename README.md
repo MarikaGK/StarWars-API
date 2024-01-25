@@ -55,7 +55,7 @@ According to the `package.json` documentation, to run the project you need to us
 
 StarWars-API is based on Webpack. To deploy your own project, you have to use `npm run buid` command to buil your dist directory
 
-Next you have to use script for deployment entering `npm run deploly` in your command line
+Next you have to use script for deployment entering `npm run deploy` in your command line
 
 ---
 
